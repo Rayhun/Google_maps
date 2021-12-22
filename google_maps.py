@@ -7,7 +7,7 @@ longitude1 = 90.328700
 # Custom Icon
 custom_icon = folium.features.CustomIcon('icon.png', icon_size=(20, 20))
 #  Map
-map = folium.Map(location=[latitude, longitude], zoom_start=6)
+map = folium.Map(location=[latitude, longitude], zoom_start=12)
 #  Marker
 folium.Marker(
     [latitude, longitude], popup="Bangladesh", icon=folium.Icon(color="red", icon="home"), tooltip="My Home"
@@ -19,7 +19,8 @@ folium.Marker(
 # Circle Marker
 folium.CircleMarker(
     location=[latitude, longitude], radius=100, popup="Bangladesh",
-    color="green", fill_color="gray", fill_opacity=0.6
+    color="green", fill_color="gray", fill_opacity=0.6, tooltip="My Home",
+    fill=True, stroke=True, weight=2, opacity=0.8
 ).add_to(map)
 #  Save
 map.save("map.html")
