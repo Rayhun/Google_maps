@@ -15,5 +15,11 @@ folium.Marker(
 folium.Marker(
     [latitude1, longitude1], popup="Bangladesh", icon=custom_icon, tooltip="My Home"
 ).add_to(map)
+
+# Circle Marker
+folium.CircleMarker(
+    location=[latitude, longitude], radius=100, popup="Bangladesh",
+    color="green", fill_color="gray", fill_opacity=0.6
+).add_to(map)
 #  Save
 map.save("map.html")
