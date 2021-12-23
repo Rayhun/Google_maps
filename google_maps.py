@@ -39,27 +39,6 @@ map.add_child(folium.raster_layers.TileLayer(
 map.add_child(folium.raster_layers.TileLayer(
     tiles='Stamen Watercolor', attr='Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
 ))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='OpenStreetMap', attr='Map tiles by OpenStreetMap, under CC BY SA.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB Positron', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB DarkMatter', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB PositronNoLabels', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB PositronOnlyLabels', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB DarkMatterNoLabels', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
-map.add_child(folium.raster_layers.TileLayer(
-    tiles='CartoDB DarkMatterOnlyLabels', attr='Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
-))
 folium.LayerControl().add_to(map)
 #  Save
 map.save("map.html")
