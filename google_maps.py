@@ -2,8 +2,8 @@ import folium
 #  Bangladesh Location
 latitude = 24.098379
 longitude = 90.328712
-latitude1 = 24.098300
-longitude1 = 90.328700
+latitude1 = 24.198300
+longitude1 = 90.128700
 # Custom Icon
 custom_icon = folium.features.CustomIcon('icon.png', icon_size=(20, 20))
 #  Map
@@ -22,6 +22,13 @@ folium.CircleMarker(
     color="green", fill_color="gray", fill_opacity=0.6, tooltip="My Home",
     fill=True, stroke=True, weight=2, opacity=0.8
 ).add_to(map)
+# Pixel Marker
+folium.Circle(
+    location=[latitude1, longitude1], radius=1000, popup="Bangladesh",
+    color="green", fill_color="gray", fill_opacity=0.6, tooltip="My Home",
+    fill=True, stroke=True, weight=2, opacity=0.8
+).add_to(map)
+
 # add tiles to the map
 map.add_child(folium.raster_layers.TileLayer(
     tiles='Stamen Terrain', attr='Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
